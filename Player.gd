@@ -1,8 +1,12 @@
 extends KinematicBody2D
 var speed = 200
 var gravity = 800
-var jump_force = -400
+var jump_force = -425
+var max_health = 3.0
+var health = 3.0
+var knockback_force = 300
 var velocity = Vector2.ZERO
+signal coins_changed(new_amount)
 func _physics_process(delta):
 	if Input.is_action_pressed("ui_right"):
 		velocity.x = speed
@@ -17,7 +21,19 @@ func _physics_process(delta):
 
 	velocity = move_and_slide(velocity, Vector2.UP)
 var coins = 0
-signal coins_changed
 func add_coin():
 	coins += 1
 	emit_signal("coins_changed", coins)
+signal health_changed
+signal game_over
+func take_damage(from_position):
+	health -= 0.5
+	print("Игрок получил урон. Здоровье:", health)
+	emit_signal("health_changed", health)
+
+	var dir = (global_position - from_position).normalized()
+	velocity = dir * knockback_force
+	velocity.y = -200
+
+	if health <= 0:
+		emit_signal("game_over")

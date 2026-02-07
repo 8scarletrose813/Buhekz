@@ -7,3 +7,4 @@ func _on_body_entered(body):
 		body.add_coin()
 	if body.name == "Player":
 		queue_free()
+	
