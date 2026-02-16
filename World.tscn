@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Node2D.tscn" type="PackedScene" id=2]
@@ -10,8 +10,81 @@
 [ext_resource path="res://Chervak.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Koluchka.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Koluchka.gd" type="Script" id=10]
+[ext_resource path="res://MovePlatform.tscn" type="PackedScene" id=11]
+[ext_resource path="res://MovePlatform2.gd" type="Script" id=12]
+[ext_resource path="res://Checkpoint.tscn" type="PackedScene" id=13]
+[ext_resource path="res://KillingZone.tscn" type="PackedScene" id=14]
+[ext_resource path="res://HeartPickup.tscn" type="PackedScene" id=15]
+[ext_resource path="res://HeartPickup2.gd" type="Script" id=16]
+[ext_resource path="res://Lava.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Door.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Kaktus.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Door2.gd" type="Script" id=20]
+[ext_resource path="res://Key.tscn" type="PackedScene" id=21]
 
 [node name="World" type="Node2D"]
+
+[node name="MovePlatform" parent="." instance=ExtResource( 11 )]
+position = Vector2( 13263, 43 )
+
+[node name="MovePlatform9" parent="." instance=ExtResource( 11 )]
+position = Vector2( 27544, -280 )
+
+[node name="MovePlatform11" parent="." instance=ExtResource( 11 )]
+position = Vector2( 30784, -592 )
+
+[node name="MovePlatform12" parent="." instance=ExtResource( 11 )]
+position = Vector2( 33224, -840 )
+
+[node name="MovePlatform2" parent="." instance=ExtResource( 11 )]
+position = Vector2( 13509, -142 )
+script = ExtResource( 12 )
+move_direction = Vector2( 0, 1 )
+distance = 55.0
+speed = 80.0
+
+[node name="MovePlatform3" parent="." instance=ExtResource( 11 )]
+position = Vector2( 20776, 240 )
+script = ExtResource( 12 )
+move_direction = Vector2( 0, 1 )
+distance = 55.0
+speed = 80.0
+
+[node name="MovePlatform4" parent="." instance=ExtResource( 11 )]
+position = Vector2( 22584, -176 )
+script = ExtResource( 12 )
+move_direction = Vector2( 0, 1 )
+distance = 55.0
+speed = 80.0
+
+[node name="MovePlatform5" parent="." instance=ExtResource( 11 )]
+position = Vector2( 25616, -8 )
+script = ExtResource( 12 )
+move_direction = Vector2( 0, 1 )
+distance = 55.0
+speed = 80.0
+
+[node name="MovePlatform7" parent="." instance=ExtResource( 11 )]
+position = Vector2( 25840, -160 )
+script = null
+
+[node name="MovePlatform10" parent="." instance=ExtResource( 11 )]
+position = Vector2( 30168, -424 )
+script = null
+
+[node name="MovePlatform8" parent="." instance=ExtResource( 11 )]
+position = Vector2( 25424, 184 )
+script = ExtResource( 12 )
+move_direction = Vector2( 0, 1 )
+distance = 55.0
+speed = 80.0
+
+[node name="MovePlatform6" parent="." instance=ExtResource( 11 )]
+position = Vector2( 21544, -168 )
+script = ExtResource( 12 )
+move_direction = Vector2( 0, 1 )
+distance = 55.0
+speed = 80.0
 
 [node name="Node2D" parent="." instance=ExtResource( 2 )]
 
@@ -23,7 +96,7 @@ transform = Transform2D( 0.5, 0, 0, 0.5, 0, 30 )
 [node name="UI" parent="." instance=ExtResource( 4 )]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 82, 365 )
+position = Vector2( 96, 360 )
 
 [node name="Coins" parent="." instance=ExtResource( 3 )]
 position = Vector2( 253, 298 )
@@ -57,6 +130,18 @@ position = Vector2( 3134, 354 )
 
 [node name="Coins13" parent="." instance=ExtResource( 3 )]
 position = Vector2( 4413, 229 )
+
+[node name="Coins68" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4705, 138 )
+
+[node name="Coins69" parent="." instance=ExtResource( 3 )]
+position = Vector2( 5315, 211 )
+
+[node name="Coins66" parent="." instance=ExtResource( 3 )]
+position = Vector2( 5043, 315 )
+
+[node name="Coins67" parent="." instance=ExtResource( 3 )]
+position = Vector2( 5043, 458 )
 
 [node name="Coins16" parent="." instance=ExtResource( 3 )]
 position = Vector2( 7491, -281 )
@@ -107,10 +192,124 @@ position = Vector2( 18948, 276 )
 position = Vector2( 19844, 198 )
 
 [node name="Coins64" parent="." instance=ExtResource( 3 )]
-position = Vector2( 20376, 208 )
+position = Vector2( 20237, 337 )
 
 [node name="Coins65" parent="." instance=ExtResource( 3 )]
-position = Vector2( 20486, 343 )
+position = Vector2( 20366, 342 )
+
+[node name="Coins70" parent="." instance=ExtResource( 3 )]
+position = Vector2( 21192, -112 )
+
+[node name="Coins73" parent="." instance=ExtResource( 3 )]
+position = Vector2( 21952, -440 )
+
+[node name="Coins75" parent="." instance=ExtResource( 3 )]
+position = Vector2( 23104, -120 )
+
+[node name="Coins77" parent="." instance=ExtResource( 3 )]
+position = Vector2( 23936, -144 )
+
+[node name="Coins79" parent="." instance=ExtResource( 3 )]
+position = Vector2( 24264, -104 )
+
+[node name="Coins81" parent="." instance=ExtResource( 3 )]
+position = Vector2( 24384, 8 )
+
+[node name="Coins82" parent="." instance=ExtResource( 3 )]
+position = Vector2( 26176, -608 )
+
+[node name="Coins86" parent="." instance=ExtResource( 3 )]
+position = Vector2( 26424, -616 )
+
+[node name="Coins87" parent="." instance=ExtResource( 3 )]
+position = Vector2( 27752, -424 )
+
+[node name="Coins92" parent="." instance=ExtResource( 3 )]
+position = Vector2( 28024, -360 )
+
+[node name="Coins96" parent="." instance=ExtResource( 3 )]
+position = Vector2( 29504, -416 )
+
+[node name="Coins97" parent="." instance=ExtResource( 3 )]
+position = Vector2( 32064, -848 )
+
+[node name="Coins101" parent="." instance=ExtResource( 3 )]
+position = Vector2( 34176, -1440 )
+
+[node name="Coins104" parent="." instance=ExtResource( 3 )]
+position = Vector2( 35512, -840 )
+
+[node name="Coins106" parent="." instance=ExtResource( 3 )]
+position = Vector2( 37032, -1416 )
+
+[node name="Coins107" parent="." instance=ExtResource( 3 )]
+position = Vector2( 35880, -984 )
+
+[node name="Coins105" parent="." instance=ExtResource( 3 )]
+position = Vector2( 34560, -1160 )
+
+[node name="Coins102" parent="." instance=ExtResource( 3 )]
+position = Vector2( 33184, -1032 )
+
+[node name="Coins103" parent="." instance=ExtResource( 3 )]
+position = Vector2( 32584, -960 )
+
+[node name="Coins98" parent="." instance=ExtResource( 3 )]
+position = Vector2( 31432, -832 )
+
+[node name="Coins99" parent="." instance=ExtResource( 3 )]
+position = Vector2( 30776, -704 )
+
+[node name="Coins100" parent="." instance=ExtResource( 3 )]
+position = Vector2( 30024, -512 )
+
+[node name="Coins93" parent="." instance=ExtResource( 3 )]
+position = Vector2( 29248, -416 )
+
+[node name="Coins94" parent="." instance=ExtResource( 3 )]
+position = Vector2( 28992, -416 )
+
+[node name="Coins95" parent="." instance=ExtResource( 3 )]
+position = Vector2( 28736, -416 )
+
+[node name="Coins88" parent="." instance=ExtResource( 3 )]
+position = Vector2( 27536, -424 )
+
+[node name="Coins89" parent="." instance=ExtResource( 3 )]
+position = Vector2( 27336, -416 )
+
+[node name="Coins90" parent="." instance=ExtResource( 3 )]
+position = Vector2( 27040, -624 )
+
+[node name="Coins91" parent="." instance=ExtResource( 3 )]
+position = Vector2( 26888, -624 )
+
+[node name="Coins83" parent="." instance=ExtResource( 3 )]
+position = Vector2( 25424, -56 )
+
+[node name="Coins84" parent="." instance=ExtResource( 3 )]
+position = Vector2( 24792, -64 )
+
+[node name="Coins85" parent="." instance=ExtResource( 3 )]
+position = Vector2( 25088, -32 )
+
+[node name="Coins80" parent="." instance=ExtResource( 3 )]
+position = Vector2( 24128, 16 )
+
+[node name="Coins78" parent="." instance=ExtResource( 3 )]
+position = Vector2( 23680, -8 )
+
+[node name="Coins76" parent="." instance=ExtResource( 3 )]
+position = Vector2( 22584, -504 )
+
+[node name="Coins74" parent="." instance=ExtResource( 3 )]
+position = Vector2( 21816, -440 )
+
+[node name="Coins71" parent="." instance=ExtResource( 3 )]
+position = Vector2( 21056, -104 )
+
+[node name="Coins72" parent="." instance=ExtResource( 3 )]
+position = Vector2( 20784, 56 )
 
 [node name="Coins63" parent="." instance=ExtResource( 3 )]
 position = Vector2( 20105, 191 )
@@ -209,7 +408,7 @@ position = Vector2( 6528, 31 )
 position = Vector2( 6342, 97 )
 
 [node name="Coins14" parent="." instance=ExtResource( 3 )]
-position = Vector2( 4277, 187 )
+position = Vector2( 4272, 104 )
 
 [node name="Coins15" parent="." instance=ExtResource( 3 )]
 position = Vector2( 4123, 233 )
@@ -228,17 +427,7 @@ script = ExtResource( 10 )
 [node name="AnimatedSprite2" parent="Koluchka" instance=ExtResource( 9 )]
 position = Vector2( 0.937988, 18.75 )
 scale = Vector2( 0.875, 0.875 )
-frame = 2
-
-[node name="Koluchka2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 4288, 278 )
-scale = Vector2( 0.6, 0.6 )
-script = ExtResource( 10 )
-
-[node name="AnimatedSprite2" parent="Koluchka2" instance=ExtResource( 9 )]
-position = Vector2( 0.937988, 18.75 )
-scale = Vector2( 0.875, 0.875 )
-frame = 2
+frame = 1
 
 [node name="Koluchka3" parent="." instance=ExtResource( 5 )]
 position = Vector2( 8388, 464 )
@@ -246,6 +435,7 @@ script = ExtResource( 10 )
 
 [node name="AnimatedSprite2" parent="Koluchka3" instance=ExtResource( 9 )]
 position = Vector2( 0, 20 )
+frame = 1
 
 [node name="Koluchka4" parent="." instance=ExtResource( 5 )]
 position = Vector2( 9280, -41.0001 )
@@ -255,6 +445,7 @@ script = ExtResource( 10 )
 [node name="AnimatedSprite2" parent="Koluchka4" instance=ExtResource( 9 )]
 position = Vector2( 0.937988, 18.75 )
 scale = Vector2( 0.875, 0.875 )
+frame = 1
 
 [node name="Koluchka5" parent="." instance=ExtResource( 5 )]
 position = Vector2( 9918, -41 )
@@ -264,7 +455,7 @@ script = ExtResource( 10 )
 [node name="AnimatedSprite2" parent="Koluchka5" instance=ExtResource( 9 )]
 position = Vector2( 1.66846, 18.3333 )
 scale = Vector2( 0.875, 0.875 )
-frame = 2
+frame = 1
 
 [node name="Koluchka6" parent="." instance=ExtResource( 5 )]
 position = Vector2( 10875, -47 )
@@ -274,7 +465,7 @@ script = ExtResource( 10 )
 [node name="AnimatedSprite2" parent="Koluchka6" instance=ExtResource( 9 )]
 position = Vector2( 0.937988, 18.75 )
 scale = Vector2( 0.875, 0.875 )
-frame = 2
+frame = 1
 
 [node name="Koluchka7" parent="." instance=ExtResource( 5 )]
 position = Vector2( 11775, -45 )
@@ -284,7 +475,7 @@ script = ExtResource( 10 )
 [node name="AnimatedSprite2" parent="Koluchka7" instance=ExtResource( 9 )]
 position = Vector2( 0.937988, 18.75 )
 scale = Vector2( 0.875, 0.875 )
-frame = 2
+frame = 1
 
 [node name="Koluchka8" parent="." instance=ExtResource( 5 )]
 position = Vector2( 12639, 87 )
@@ -294,7 +485,7 @@ script = ExtResource( 10 )
 [node name="AnimatedSprite2" parent="Koluchka8" instance=ExtResource( 9 )]
 position = Vector2( 0.937988, 18.75 )
 scale = Vector2( 0.875, 0.875 )
-frame = 2
+frame = 1
 
 [node name="Koluchka9" parent="." instance=ExtResource( 5 )]
 position = Vector2( 15165, 469 )
@@ -304,7 +495,7 @@ script = ExtResource( 10 )
 [node name="AnimatedSprite2" parent="Koluchka9" instance=ExtResource( 9 )]
 position = Vector2( 0.937988, 18.75 )
 scale = Vector2( 0.875, 0.875 )
-frame = 2
+frame = 1
 
 [node name="Koluchka10" parent="." instance=ExtResource( 5 )]
 position = Vector2( 17795, 150 )
@@ -314,7 +505,7 @@ script = ExtResource( 10 )
 [node name="AnimatedSprite2" parent="Koluchka10" instance=ExtResource( 9 )]
 position = Vector2( 0.937988, 18.75 )
 scale = Vector2( 0.875, 0.875 )
-frame = 2
+frame = 1
 
 [node name="Koluchka11" parent="." instance=ExtResource( 5 )]
 position = Vector2( 18695, 272 )
@@ -324,71 +515,152 @@ script = ExtResource( 10 )
 [node name="AnimatedSprite2" parent="Koluchka11" instance=ExtResource( 9 )]
 position = Vector2( 0.937988, 18.75 )
 scale = Vector2( 0.875, 0.875 )
-frame = 2
+frame = 1
 
-[node name="Koluchka12" parent="." instance=ExtResource( 5 )]
-position = Vector2( 20100, 397 )
+[node name="Koluchka16" parent="." instance=ExtResource( 5 )]
+position = Vector2( 21298, -110 )
 scale = Vector2( 0.64, 0.64 )
 script = ExtResource( 10 )
 
-[node name="AnimatedSprite2" parent="Koluchka12" instance=ExtResource( 9 )]
+[node name="AnimatedSprite2" parent="Koluchka16" instance=ExtResource( 9 )]
 position = Vector2( 0.937988, 18.75 )
 scale = Vector2( 0.875, 0.875 )
+frame = 1
 
-[node name="Koluchka15" parent="." instance=ExtResource( 5 )]
-position = Vector2( 20360, 400 )
+[node name="Koluchka17" parent="." instance=ExtResource( 5 )]
+position = Vector2( 22074, -426 )
 scale = Vector2( 0.64, 0.64 )
 script = ExtResource( 10 )
 
-[node name="AnimatedSprite2" parent="Koluchka15" instance=ExtResource( 9 )]
+[node name="AnimatedSprite2" parent="Koluchka17" instance=ExtResource( 9 )]
 position = Vector2( 0.937988, 18.75 )
 scale = Vector2( 0.875, 0.875 )
+frame = 1
 
-[node name="Koluchka13" parent="." instance=ExtResource( 5 )]
-position = Vector2( 19843, 399 )
+[node name="Koluchka18" parent="." instance=ExtResource( 5 )]
+position = Vector2( 23868, 334 )
 scale = Vector2( 0.64, 0.64 )
 script = ExtResource( 10 )
 
-[node name="AnimatedSprite2" parent="Koluchka13" instance=ExtResource( 9 )]
+[node name="AnimatedSprite2" parent="Koluchka18" instance=ExtResource( 9 )]
 position = Vector2( 0.937988, 18.75 )
 scale = Vector2( 0.875, 0.875 )
+frame = 1
 
-[node name="Koluchka14" parent="." instance=ExtResource( 5 )]
-position = Vector2( 19586, 401 )
+[node name="Koluchka19" parent="." instance=ExtResource( 5 )]
+position = Vector2( 23988, 334 )
 scale = Vector2( 0.64, 0.64 )
 script = ExtResource( 10 )
 
-[node name="AnimatedSprite2" parent="Koluchka14" instance=ExtResource( 9 )]
+[node name="AnimatedSprite2" parent="Koluchka19" instance=ExtResource( 9 )]
 position = Vector2( 0.937988, 18.75 )
 scale = Vector2( 0.875, 0.875 )
-frame = 2
+frame = 1
+
+[node name="Killingzone" parent="." instance=ExtResource( 14 )]
+position = Vector2( 10928, 808 )
+scale = Vector2( 18, 15 )
+
+[node name="Lava" parent="." instance=ExtResource( 17 )]
+position = Vector2( 28736, -72 )
+scale = Vector2( 1, 1.2 )
+
+[node name="Lava2" parent="." instance=ExtResource( 17 )]
+position = Vector2( 29248, -72 )
+scale = Vector2( 1, 1.2 )
+
+[node name="Lava4" parent="." instance=ExtResource( 17 )]
+position = Vector2( 29504, -72 )
+scale = Vector2( 1, 1.2 )
+
+[node name="Lava5" parent="." instance=ExtResource( 17 )]
+position = Vector2( 34176, -648 )
+scale = Vector2( 1, 1.2 )
+
+[node name="Lava6" parent="." instance=ExtResource( 17 )]
+position = Vector2( 34432, -648 )
+scale = Vector2( 1, 1.2 )
+
+[node name="Lava3" parent="." instance=ExtResource( 17 )]
+position = Vector2( 28992, -72 )
+scale = Vector2( 1, 1.2 )
 
 [node name="Enemy" parent="." instance=ExtResource( 5 )]
 position = Vector2( 830, 397 )
 
 [node name="AnimatedSprite" parent="Enemy" instance=ExtResource( 8 )]
-frame = 2
+frame = 1
 
 [node name="Enemy2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 5544, 445 )
 
 [node name="AnimatedSprite" parent="Enemy2" instance=ExtResource( 8 )]
-frame = 1
 
 [node name="Enemy3" parent="." instance=ExtResource( 5 )]
 position = Vector2( 15794, 457 )
 
 [node name="AnimatedSprite" parent="Enemy3" instance=ExtResource( 8 )]
+frame = 2
 
 [node name="Mouse" parent="." instance=ExtResource( 5 )]
 position = Vector2( 2243, 390 )
 
 [node name="AnimatedSprite" parent="Mouse" instance=ExtResource( 7 )]
 position = Vector2( 1.25, 22.5 )
-frame = 2
 
 [node name="Mouse2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 14145, 584 )
 
 [node name="AnimatedSprite" parent="Mouse2" instance=ExtResource( 7 )]
 position = Vector2( 1.25, 22.5 )
+frame = 0
+
+[node name="Checkpoint" parent="." instance=ExtResource( 13 )]
+position = Vector2( 1239, 159 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Checkpoint2" parent="." instance=ExtResource( 13 )]
+position = Vector2( 7866, 479 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Checkpoint3" parent="." instance=ExtResource( 13 )]
+position = Vector2( 11556, -30 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Checkpoint4" parent="." instance=ExtResource( 13 )]
+position = Vector2( 19576, 352 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="HeartPickup" parent="." instance=ExtResource( 15 )]
+position = Vector2( 13880, -416 )
+
+[node name="HeartPickup2" parent="." instance=ExtResource( 15 )]
+position = Vector2( 26304, -616 )
+script = ExtResource( 16 )
+price = 25
+
+[node name="Door" parent="." instance=ExtResource( 18 )]
+position = Vector2( 38272, -2040 )
+script = ExtResource( 20 )
+next_scene = "res://Ending.tscn"
+
+[node name="Key" parent="Door" instance=ExtResource( 21 )]
+position = Vector2( -3952, 664 )
+
+[node name="Kaktus" parent="." instance=ExtResource( 19 )]
+position = Vector2( 34696, -640 )
+
+[node name="Kaktus2" parent="." instance=ExtResource( 19 )]
+position = Vector2( 32576, -704 )
+
+[node name="Kaktus3" parent="." instance=ExtResource( 19 )]
+position = Vector2( 26944, -512 )
+
+[node name="Kaktus4" parent="." instance=ExtResource( 19 )]
+position = Vector2( 24256, 312 )
+
+[node name="Kaktus5" parent="." instance=ExtResource( 19 )]
+position = Vector2( 19968, 392 )
+
+[node name="Kaktus6" parent="." instance=ExtResource( 19 )]
+position = Vector2( 4264, 264 )

@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://DialogueUI.gd" type="Script" id=1]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://3167-font.otf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 23
+font_data = SubResource( 1 )
+
+[node name="DialogueUI" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="Panel" type="Panel" parent="."]
+anchor_left = 0.425
+anchor_top = 0.642
+anchor_right = 0.425
+anchor_bottom = 0.642
+margin_left = -1184.2
+margin_top = 105.8
+margin_right = 1398.8
+margin_bottom = 216.8
+
+[node name="Label" type="Label" parent="Panel"]
+anchor_left = 0.395277
+anchor_top = 0.514775
+anchor_right = 0.619435
+anchor_bottom = 0.541802
+margin_left = -524.0
+margin_top = -65.14
+margin_right = 506.0
+margin_bottom = 49.86
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Timer" type="Timer" parent="."]

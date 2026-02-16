@@ -1,0 +1,40 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://NPC2.gd" type="Script" id=1]
+[ext_resource path="res://NPC.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Door.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Intro_map.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Door2.gd" type="Script" id=6]
+[ext_resource path="res://And.tscn" type="PackedScene" id=7]
+[ext_resource path="res://KillingZone.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Player2.gd" type="Script" id=9]
+[ext_resource path="res://Ending.gd" type="Script" id=10]
+
+[node name="Ending" type="Node2D"]
+script = ExtResource( 10 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2044, 232 )
+script = ExtResource( 9 )
+
+[node name="Door" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2448, 204 )
+script = ExtResource( 6 )
+next_scene = "res://Ending.tscn"
+
+[node name="NPC" parent="." instance=ExtResource( 2 )]
+position = Vector2( 732, 240 )
+scale = Vector2( 0.7, 0.7 )
+script = ExtResource( 1 )
+dialogue = [ "You completed the task!" ]
+
+[node name="Intro_Map" parent="." instance=ExtResource( 5 )]
+
+[node name="Node2D" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1780, 276 )
+scale = Vector2( 0.7, 0.7 )
+
+[node name="Killingzone" parent="." instance=ExtResource( 8 )]
+position = Vector2( 809, 761 )
+scale = Vector2( 2, 15 )
